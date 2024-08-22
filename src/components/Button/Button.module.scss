@@ -1,0 +1,15 @@
+.sectionButton{
+    font-family: sans-serif;
+    h2{
+        margin: 0;
+        padding: 0;
+        margin-bottom: 1rem;
+
+    }
+    button{
+        padding: 1rem 2rem;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
