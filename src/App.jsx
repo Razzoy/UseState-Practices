@@ -16,11 +16,19 @@ function App() {
       <Button></Button>
       <Splitter title={"3.1.2"}></Splitter>
       <Input></Input>
-      <Splitter title={"3.1.3"}></Splitter>
-      <ToDo>
-        <ToDoHeader></ToDoHeader>
-        <ToDoTask></ToDoTask>
-      </ToDo>
+      <Splitter title={"3.1.3 & 3.1.4"}></Splitter>
+      <div className={style.containerToDo}>
+        <ToDo>
+          <ToDoHeader title='To Do'></ToDoHeader>
+          <ToDoTask></ToDoTask>
+        </ToDo>
+        <ToDo>
+          <ToDoHeader title='In Progress'></ToDoHeader>
+        </ToDo>
+        <ToDo>
+          <ToDoHeader title='Done'></ToDoHeader>
+        </ToDo>
+      </div>
     </>
   );
 }

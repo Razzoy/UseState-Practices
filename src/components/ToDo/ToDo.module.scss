@@ -2,36 +2,38 @@
 
 .sectionToDo {
     color: $primary-color;
-    padding: 3rem 1rem;
-    margin: 1rem;
+    padding: 2rem 1rem;
     background-color: $toDo-color;
     width: 30rem;
     height: 40rem;
     font-family: $font-flower;
     text-decoration: underline;
 
-    button{
+    button {
         display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: transparent;
-            border: none;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border: none;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+
+        &:hover {
+            transition: 200ms ease-in-out;
+            background-color: $secondary-color;
+        }
+
+        img {
             width: 2rem;
             height: 2rem;
-            border-radius: 50%;
-            &:hover{
-                transition: 200ms ease-in-out;
-                background-color: $secondary-color;
+
+            &:hover {
+                cursor: pointer;
+                stroke: $secondary-color;
+                border-color: $secondary-color;
             }
-            img{
-                width: 2rem;
-                height: 2rem;
-                &:hover {
-                    cursor: pointer;
-                    stroke: $secondary-color;
-                    border-color: $secondary-color;
-                }
-            }
+        }
     }
 
     .headerToDo {
@@ -39,6 +41,7 @@
         grid-template-columns: 9fr 1fr;
         justify-content: center;
         align-items: center;
+        margin-bottom: 2rem;
 
         h1 {
             text-align: center;
@@ -46,23 +49,78 @@
             margin: 0;
         }
 
-        svg {
-            width: 32px;
-            height: 32px;
-            border: 2px solid $primary-color;
-            border-radius: 50%;
-            transition: border-color 200ms;
-            path{
-                transition: stroke 200ms
+        button {
+            width: 3rem;
+            height: 3rem;
+
+            img {
+                width: 3rem;
+                height: 3rem;
             }
-            &:hover {
-                cursor: pointer;
-                stroke: $secondary-color;
-                border-color: $secondary-color;
+        }
+    }
+
+    .sectionTasks{
+        .containerTasks {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        padding: 0.5rem 0;
+        p {
+            font-size: 1.3rem;
+            margin: 0.5rem 0;
+        }
+
+        figure {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            border-left: 3px solid $primary-color;
+        }
+    }
+        .containerTasks {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+    
+            button:nth-of-type(0){
+                margin: auto;
+                    }
+    
+            p {
+                font-size: 1.3rem;
+                margin: 0.5rem 0;
+                padding-left: 1rem;
             }
-            &:hover path {
-                stroke: $secondary-color;
+    
+            figure {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.5rem;
+                border-left: 3px solid $primary-color;
             }
+        }
+    }
+    .sectionTasks > button{
+        margin-left: 18.85rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        img{
+            width: 2.5rem;
+        height: 2.5rem;
+        }
+    }
+}
+
+.sectionToDo:nth-child(2), .sectionToDo:nth-child(3){
+    .headerToDo{
+        display: block;
+        button{
+        display: none;
         }
     }
 }
